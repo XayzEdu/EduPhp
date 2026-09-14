@@ -1,0 +1,19 @@
+{
+  "name": "xayzeduphp",
+  "version": "1.0.0",
+  "description": "Buku interaktif 50 halaman untuk belajar inti bahasa PHP — konsep, contoh kode, dan studi kasus, dengan syntax highlight ala VS Code, Markdown, dan KaTeX.",
+  "private": true,
+  "license": "MIT",
+  "keywords": ["php", "belajar-php", "tutorial", "ebook", "syntax-highlight", "katex", "markdown"],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "npx --yes serve . -l 3000",
+    "dev": "npx --yes serve . -l 3000",
+    "php": "php -S localhost:8000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}

@@ -1,0 +1,94 @@
+/* ==========================================================================
+   VS Code "Dark+" inspired Prism theme — tuned for PHP
+   Matches the default VS Code dark color tokens:
+     keyword   #569CD6   variable  #9CDCFE   string  #CE9178
+     function  #DCDCAA   number    #B5CEA8   comment #6A9955
+     class     #4EC9B0   punctuation #D4D4D4  tag     #569CD6
+     operator  #D4D4D4   php-tag   #808080
+   ========================================================================== */
+
+code[class*="language-"],
+pre[class*="language-"]{
+  color:#D4D4D4;
+  background:none;
+  text-shadow:none;
+  font-family:'JetBrains Mono',monospace;
+  text-align:left;
+  white-space:pre;
+  word-spacing:normal;
+  word-break:normal;
+  word-wrap:normal;
+  line-height:1.62;
+  tab-size:4;
+  hyphens:none;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata{color:#6A9955; font-style:italic;}
+
+.token.punctuation{color:#D4D4D4;}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.constant,
+.token.symbol,
+.token.deleted{color:#569CD6;}
+
+.token.number{color:#B5CEA8;}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted{color:#CE9178;}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string{color:#D4D4D4; background:none;}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword{color:#569CD6;}
+
+.token.function,
+.token.class-name{color:#DCDCAA;}
+
+.token.regex,
+.token.important,
+.token.variable{color:#9CDCFE;}
+
+.token.important,
+.token.bold{font-weight:bold;}
+.token.italic{font-style:italic;}
+
+/* PHP specifics */
+.token.php .token.delimiter,
+.token.php-tag{color:#808080;}
+
+.token.class-name{color:#4EC9B0;}
+
+.token.namespace{opacity:0.85;}
+
+/* line highlight (for optional emphasised lines) */
+.code-window pre .highlight-line{
+  display:inline-block;
+  width:100%;
+  background:rgba(86,156,214,.12);
+  border-left:2px solid #569CD6;
+  padding-left:6px;
+  margin-left:-8px;
+}
+
+/* scrollbar polish inside code windows */
+.code-window pre::-webkit-scrollbar,
+.output-window pre::-webkit-scrollbar{height:8px;}
+.code-window pre::-webkit-scrollbar-thumb,
+.output-window pre::-webkit-scrollbar-thumb{background:#4b4b4b; border-radius:4px;}
+.code-window pre::-webkit-scrollbar-track,
+.output-window pre::-webkit-scrollbar-track{background:transparent;}

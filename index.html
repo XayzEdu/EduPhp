@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XayzEduPhp — Buku Interaktif Belajar Inti PHP</title>
+<meta name="description" content="Buku interaktif 50 halaman untuk belajar inti bahasa PHP: pengertian, contoh kode, penggunaan, hingga studi kasus — lengkap dengan syntax highlight ala VS Code, Markdown, dan KaTeX.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+
+<!-- App styles -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/vscode-php-theme.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button id="tocToggle" class="icon-btn" aria-label="Buka daftar isi" title="Daftar Isi">☰</button>
+  <div class="brand">
+    <span class="brand-mark">&lt;?php&gt;</span>
+    XayzEduPhp <small>Buku Interaktif PHP</small>
+  </div>
+  <a class="icon-btn" href="https://github.com/" target="_blank" rel="noopener" aria-label="Lihat di GitHub" title="Sumber di GitHub">↗</a>
+</header>
+
+<main class="stage">
+  <div class="book-wrap">
+    <div class="book">
+      <div class="spine"></div>
+      <div class="leaf-stage" id="leafStage"><!-- halaman dirender di sini oleh app.js --></div>
+    </div>
+  </div>
+
+  <div class="ribbon-progress"><i id="progressBar"></i></div>
+
+  <nav class="controls">
+    <button id="prevBtn" class="nav-btn" aria-label="Halaman sebelumnya">‹</button>
+    <div class="page-jump">
+      <span>Hal.</span>
+      <input id="pageInput" type="number" min="0" value="1">
+      <span>/ 50</span>
+    </div>
+    <button id="nextBtn" class="nav-btn" aria-label="Halaman berikutnya">›</button>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  XayzEduPhp &mdash; dibuat untuk belajar inti bahasa PHP dari nol hingga OOP &amp; API.
+  Kode contoh berlisensi bebas dipakai untuk belajar.
+</footer>
+
+<!-- ------------------------------------------------------------ TOC ---- -->
+<div id="tocScrim" class="toc-scrim"></div>
+<aside id="tocDrawer" class="toc-drawer">
+  <div class="toc-head">
+    <h2>Daftar Isi</h2>
+    <input id="tocSearch" class="toc-search" type="text" placeholder="Cari bab...">
+  </div>
+  <div id="tocList" class="toc-list"><!-- diisi oleh app.js --></div>
+</aside>
+
+<!-- ------------------------------------------------------- libraries --- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup-templating.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+<!-- ---------------------------------------------------- konten buku --- -->
+<script src="data/content-01-10.js"></script>
+<script src="data/content-11-20.js"></script>
+<script src="data/content-21-30.js"></script>
+<script src="data/content-31-40.js"></script>
+<script src="data/content-41-50.js"></script>
+
+<!-- --------------------------------------------------------- app -------->
+<script src="js/app.js"></script>
+</body>
+</html>
