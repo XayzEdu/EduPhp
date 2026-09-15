@@ -86,7 +86,7 @@
         '<div class="cover-mark">&lt;?php // mulai belajar ?&gt;</div>' +
         '<h1>' + TOTAL_META.title + '</h1>' +
         '<p class="sub">' + TOTAL_META.subtitle + '</p>' +
-        '<div class="cover-meta">50 Halaman &middot; Konsep, Contoh &amp; Studi Kasus</div>';
+        '<div class="cover-meta">' + pages.length + ' Halaman &middot; Konsep, Database &amp; Latihan Interaktif</div>';
       return;
     }
     container.className = "leaf curl-right";
@@ -111,6 +111,10 @@
         throwOnError:false
       });
     }
+    if (page.exercise && window.XayzExercise){
+      var exHost = container.querySelector(".prose");
+      if (exHost) window.XayzExercise.mount(exHost, page.exercise, page.id);
+    }
   }
 
   function pageById(id){
@@ -132,6 +136,8 @@
     $("#nextBtn").disabled = current >= total;
     $("#pageInput").value = current;
     $("#pageInput").max = total;
+    var totalLabel = $("#pageTotalLabel");
+    if (totalLabel) totalLabel.textContent = "/ " + total;
     var pct = Math.max(2, Math.round((current/total)*100));
     $("#progressBar").style.width = pct + "%";
     document.querySelectorAll(".toc-item").forEach(function(el){

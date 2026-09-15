@@ -4,3 +4,6 @@ node_modules/
 .DS_Store
 php-scripts/uploads/
 php-scripts/catatan.txt
+php-scripts/todos.db
+php-scripts/cache/
+.env

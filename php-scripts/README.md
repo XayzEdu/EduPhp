@@ -25,6 +25,7 @@ mendampingi contoh kode yang ada di dalam buku interaktif (`index.html`).
 | `06-form.html` + `06-form-handling.php` | Menangani form GET/POST |
 | `07-pdo-koneksi.php` | Koneksi & query database dengan PDO |
 | `08-keamanan.php` | Hashing password & escaping XSS |
+| `09-proyek-akhir-todo.php` | Proyek Akhir — Mini REST API Todo-List lengkap (SQLite, CRUD via HTTP) |
 
 > Catatan: `07-pdo-koneksi.php` memerlukan server MySQL aktif dan
 > menyesuaikan kredensial pada baris `$host/$db/$user/$pass`. Script
